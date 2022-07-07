@@ -1,0 +1,31 @@
+.container__main__FilterMatch{
+    width: 60rem;
+
+}
+
+.filter__match__banner img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+.container__filters{
+    background-color: aliceblue;
+}
+
+.filter__team{
+    margin-left: auto;
+}
+
+.container__filters div label,
+.container__filters div select {
+font-size: 2rem;
+margin-right: 1rem;
+font-family: var(--font-heading);
+}
+
+.container__filters div select{
+    padding: 0 .5rem;
+    cursor: pointer;
+}
+
