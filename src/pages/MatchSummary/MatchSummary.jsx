@@ -5,7 +5,9 @@ const MatchSummary = () => {
     return (
         <>
             <Navbar />
-            <MatchDetails />
+            <div className="container__main__matchSummary flex jc-center">
+                <MatchDetails />
+            </div>
         </>
     )
 }

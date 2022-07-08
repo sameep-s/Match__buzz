@@ -1,0 +1,43 @@
+.container__main__matchDetails{
+    width: 60rem;
+    border: .1rem solid var(--dark);
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+
+.matchDetail__container__heading{
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: .1rem solid var(--dark);
+}
+
+
+.detail__teamNames{
+    font-size: 2rem;
+    font-family: var(--font-heading);
+}
+
+.detail__teamNames span{
+    margin-left: auto;
+}
+
+
+.match__result{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.match__resultType,
+.match__season,
+.toss_winner,
+.match__venue,
+.match__manOfTheMatch{
+    font-size: 2rem;
+    font-family: var(--heading);
+    margin-top: 1rem;
+}
+
+.text__bold{
+    font-weight: bold;
+}
