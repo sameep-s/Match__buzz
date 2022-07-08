@@ -1,2 +1,2 @@
-# match__buzz
+# MatchBuzz
 MatchBuzz is a PWA for IPL geeks.
