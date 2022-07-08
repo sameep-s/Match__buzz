@@ -18,8 +18,9 @@ const FilterMatch = () => {
         setTeamNamesData([...teamNames]);
         setMatchDataIpl([...matchData])
 
-        // console.log(`match data:`, matchDataIpl);
         console.log(`filters:`, filters);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 

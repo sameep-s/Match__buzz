@@ -1,3 +1,7 @@
 import Homepage from "./Homepage/Homepage";
+import MatchSummary from "./MatchSummary/MatchSummary";
 
-export { Homepage };
+export {
+    Homepage,
+    MatchSummary
+};

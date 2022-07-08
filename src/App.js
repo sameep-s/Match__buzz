@@ -1,10 +1,14 @@
 import React from 'react';
-import { Homepage } from './pages';
+import { Homepage, MatchSummary } from './pages';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Homepage />
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/matchSummary/:match_ID' element={<MatchSummary />} />
+      </Routes>
     </>
   );
 }
