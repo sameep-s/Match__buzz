@@ -18,7 +18,7 @@ export const teamNames = [
     },
 
     {
-        teamFullName: "Rising Pune Supergiant",
+        teamFullName: "Rising Pune Supergiants",
         teamShortName: "RPS",
         teamLogo: "https://res.cloudinary.com/sameep1/image/upload/v1657299213/ipl__assignment/teams__images/RPS_f0wz56.jpg"
     },

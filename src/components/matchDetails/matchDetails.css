@@ -12,6 +12,23 @@
     border-bottom: .1rem solid var(--dark);
 }
 
+.teams__image__container div{
+    height: 20rem;
+}
+.teams__image__container span{
+    margin-left: auto;
+    font-size: 2rem;
+}
+
+.teams__image__container div img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.image__team2{
+    margin-left: auto;
+}
+
 
 .detail__teamNames{
     font-size: 2rem;

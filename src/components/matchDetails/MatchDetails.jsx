@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import './matchDetails.css';
 import { useParams } from 'react-router-dom';
-import { matchData } from '../../data';
+import { matchData, teamNames } from '../../data';
 
 const MatchDetails = () => {
-    const [matchDataAll, setMatchDataAll] = useState([]);
+    const [matchDataAll, setMatchDataAll] = useState([...teamNames]);
+    const [teamNamesAll, setTeamNamesAll] = useState([...matchData]);
+
     const { matchID } = useParams();
 
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setMatchDataAll([...matchData]);
 
+        setMatchDataAll([...matchData]);
+        setTeamNamesAll([...teamNames]);
     }, []);
 
     const [match] = [...matchDataAll]?.filter((item) => item.id === +matchID);
-    console.log(`match`, matchID);
+
+    const [{ teamLogo: image1 }] = [...teamNamesAll]?.filter((item) => item?.teamFullName === match?.team1) || 0;
+    const [{ teamLogo: image2 }] = [...teamNamesAll]?.filter((item) => item?.teamFullName === match?.team2) || 0;
+
+    console.log(`image1: `, image1);
 
     return (
         <>
@@ -24,9 +31,20 @@ const MatchDetails = () => {
 
                 <div className="container__inner__matchDetails">
 
+                    <div className="teams__image__container flex jc-center a-item-center mt-2 mb-2">
+                        <div className="image__team1">
+                            {image1 && <img src={image1} alt="team1__image" />}
+                        </div>
+
+                        <span className='txt-gray' >V/S</span>
+
+                        <div className="image__team2">
+                            {image2 && <img src={image2} alt="team2__image" />}
+                        </div>
+                    </div>
+
                     <div className="detail__teamNames mt-1 flex">
                         {match?.team1}
-                        <span className='txt-gray' >V/S</span>
                         <span>{match?.team2}</span>
                     </div>
 
