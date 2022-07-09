@@ -29,6 +29,8 @@ const TeamSummary = () => {
         return { year: key, won: dataChart[key].won };
     })
 
+    console.log(`dataPie:`, dataPie);
+
     useEffect(() => {
         window.scrollTo(0, 0);
 
@@ -71,7 +73,13 @@ const TeamSummary = () => {
 
                     <div className="container__pieGraph">
                         <div className="pieGraph__heading txt-center ">Season- 2017(Latest)</div>
-                        <PieGraph {...{ dataPie }} />
+                        {dataPie[0].value === 0 ?
+                            <div className="txt-center mt-4">
+                                <h2>Team Did not played this Season</h2>
+                            </div>
+                            :
+                            <PieGraph {...{ dataPie }} />
+                        }
                     </div>
 
                     <div className="container__barGraph">
