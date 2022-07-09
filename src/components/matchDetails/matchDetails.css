@@ -15,6 +15,7 @@
 .teams__image__container div{
     height: 20rem;
 }
+
 .teams__image__container span{
     margin-left: auto;
     font-size: 2rem;
@@ -57,4 +58,31 @@
 
 .text__bold{
     font-weight: bold;
+}
+
+
+/* ------------------------------------------MEDIA QUERIES */
+
+@media only screen and (max-width:650px){
+
+    .container__main__matchDetails{
+        width: 90%;
+    }
+
+    .teams__image__container div{
+        height: 13rem;
+    }
+    
+    .teams__image__container span{
+        margin-left: auto;
+        font-size: 1.4rem;
+    }
+
+
+    .detail__teamNames{
+        font-size: 1.8rem;
+        font-family: var(--font-heading);
+        font-weight: bold;
+    }
+    
 }

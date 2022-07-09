@@ -4,8 +4,6 @@ import ResponsiveBar from 'nivo/lib/components/charts/bar/ResponsiveBar';
 
 const BarGraph = ({ dataBar }) => {
 
-    console.log(`dataBar: `, dataBar);
-
     return (
         <>
             <div className="container__responsive__barGprah">

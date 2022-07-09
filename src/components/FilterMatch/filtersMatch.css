@@ -1,6 +1,5 @@
 .container__main__FilterMatch{
-    width: 60rem;
-
+    width: 90%;
 }
 
 .filter__match__banner{
@@ -30,3 +29,21 @@ font-family: var(--font-heading);
     cursor: pointer;
 }
 
+
+/* -------------------------------------------MEDIA Queries */
+
+@media only screen and (max-width: 650px) {
+
+    .container__main__FilterMatch{
+        width: 90%;
+    }
+
+    .filter__match__banner{
+        height: 20rem;
+    }
+
+    .container__matchListItem{
+        width: 90%;
+    }
+    
+}

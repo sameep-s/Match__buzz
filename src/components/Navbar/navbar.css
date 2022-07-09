@@ -17,3 +17,12 @@
 .navbar__brandName:hover{
     color: rgb(190, 190, 190);
 }
+
+/* ----------------------------------------Media Query */
+@media only screen and (max-width: 450px) {
+    
+.navbar__brandName{
+    margin-left: 1rem;
+}
+
+}

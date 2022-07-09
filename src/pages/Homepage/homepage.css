@@ -1,4 +1,15 @@
 .container__main__homepage{
     /* background-color: aliceblue; */
+}
+
+
+/* ---------------------------------------------MEDIA  */
+
+@media only screen and (max-width: 650px) {
+
+
+    .container__main__homepage{
+        width: 100%;
+    }
 
 }
