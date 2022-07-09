@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './matchDetails.css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { matchData, teamNames } from '../../data';
 
 const MatchDetails = () => {
@@ -22,7 +22,6 @@ const MatchDetails = () => {
     const [{ teamLogo: image1 }] = [...teamNamesAll]?.filter((item) => item?.teamFullName === match?.team1) || 0;
     const [{ teamLogo: image2 }] = [...teamNamesAll]?.filter((item) => item?.teamFullName === match?.team2) || 0;
 
-    console.log(`image1: `, image1);
 
     return (
         <>
@@ -31,16 +30,23 @@ const MatchDetails = () => {
 
                 <div className="container__inner__matchDetails">
 
-                    <div className="teams__image__container flex jc-center a-item-center mt-2 mb-2">
+                    <div className="teams__image__container flex jc-space-btw a-item-center mt-2 mb-2">
+
                         <div className="image__team1">
-                            {image1 && <img src={image1} alt="team1__image" />}
+                            <Link to={`/teamSummary/${match?.team1}`}>
+                                {image1 && <img src={image1} alt="team1__image" />}
+                            </Link>
                         </div>
 
                         <span className='txt-gray' >V/S</span>
 
                         <div className="image__team2">
-                            {image2 && <img src={image2} alt="team2__image" />}
+                            <Link to={`/teamSummary/${match?.team2}`}>
+                                {image2 && <img src={image2} alt="team2__image" />}
+                            </Link>
                         </div>
+
+
                     </div>
 
                     <div className="detail__teamNames mt-1 flex">
