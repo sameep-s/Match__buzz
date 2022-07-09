@@ -28,8 +28,6 @@ const TeamSummary = () => {
     const dataBar = Object.keys(dataChart).map((key) => {
         return { year: key, won: dataChart[key].won };
     })
-    console.log(`dataBarrr:`, dataBar);
-
 
     useEffect(() => {
         window.scrollTo(0, 0);
